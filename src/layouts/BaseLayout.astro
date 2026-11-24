@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/Footer.astro'; //Communicates footer file to here
 import { SITE_TITLE } from '../consts';
 
 const { title } = Astro.props;
@@ -23,7 +23,6 @@ const pageTitle = title === SITE_TITLE ? title : `${title} | ${SITE_TITLE}`;
 		<main>
 			<slot />
 		</main>
-
-		<Footer />
+ <Footer /> <!--inserts the footer document, which makes it easier to make site-wide changers -->
 	</body>
 </html>
